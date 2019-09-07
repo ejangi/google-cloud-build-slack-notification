@@ -48,7 +48,7 @@ const createSlackMessage = (build) => {
     message.attachments[0].fields.push({ title: "Repo", value: build.source.repoSource.repoName });
 
   if(build.finishTime !== undefined)
-    message.attachments[0].fields.push({ title: "Finished", value: (new Date(build.finishTime)).toString() });
+    message.attachments[0].fields.push({ title: "Finished", value: (new Date(build.finishTime)).toLocaleString('en-GB', {timeZone: "Australia/Brisbane"}) });
 
   return message;
 }
