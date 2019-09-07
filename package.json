@@ -3,7 +3,13 @@
   "version": "0.0.1",
   "description": "Slack integration for Google Cloud Build, using Google Cloud Functions",
   "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/eslint index.js"
+  },
   "dependencies": {
     "@slack/webhook": "5.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^6.3.0"
   }
 }
