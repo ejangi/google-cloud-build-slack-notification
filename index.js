@@ -44,8 +44,8 @@ const createSlackMessage = (build) => {
     ]
   };
 
-  if(build.source !== undefined && build.source.repoName !== undefined)
-    message.attachments[0].fields.push({ title: "Repo", value: build.source.repoName });
+  if(build.source.repoSource.repoName !== undefined)
+    message.attachments[0].fields.push({ title: "Repo", value: build.source.repoSource.repoName });
 
   if(build.finishTime !== undefined)
     message.attachments[0].fields.push({ title: "Finished", value: (new Date(build.finishTime)).toString() });
