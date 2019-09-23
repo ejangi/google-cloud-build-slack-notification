@@ -21,7 +21,9 @@ module.exports.subscribeSlack = (pubSubEvent, context) => {
   (async () => {
     try {
         let result = await webhook.send(message);
-        console.log(result);
+        if (result.text != 'ok') {
+            console.error(result);
+        }
     } catch (e) {
         console.error(e);
     }
