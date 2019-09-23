@@ -23,7 +23,7 @@ module.exports.subscribeSlack = (pubSubEvent, context) => {
   const message = createSlackMessage(build);
   (async () => {
     try {
-        let result = await webhook.webhook.send(message);
+        let result = await webhook.send(message);
         console.log(result);
     } catch (e) {
         console.error(e);
