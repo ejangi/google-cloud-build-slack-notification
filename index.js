@@ -5,9 +5,6 @@ const webhook = new IncomingWebhook(url);
 
 // subscribeSlack is the main function called by Cloud Functions.
 module.exports.subscribeSlack = (pubSubEvent, context) => {
-  console.log(pubSubEvent);
-  console.log(context);
-
   const build = eventToBuild(pubSubEvent.data);
 
   // Skip if the current status is not in the status list.
