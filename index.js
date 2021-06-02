@@ -37,7 +37,7 @@ const eventToBuild = (data) => {
 
 // createSlackMessage creates a message from a build object.
 const createSlackMessage = (build) => {
-  // console.log(JSON.stringify(build));
+  console.log(JSON.stringify(build));
 
   const message = {
     text: `Build \`${build.status}\``,
@@ -54,9 +54,8 @@ const createSlackMessage = (build) => {
     ]
   };
 
-  console.log('build.source...')
-  console.log(JSON.stringify(build.source));
-  if(build.source.repoSource.repoName !== undefined)
+  // console.log(JSON.stringify(build.source));
+  if(build.source && build.source.repoSource && build.source.repoSource.repoName !== undefined)
     message.attachments[0].fields.push({ title: "Repo", value: build.source.repoSource.repoName });
 
   if(build.finishTime !== undefined)
