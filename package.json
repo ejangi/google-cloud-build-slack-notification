@@ -7,7 +7,7 @@
     "test": "./node_modules/.bin/eslint index.js"
   },
   "dependencies": {
-    "@slack/webhook": "5.0.1"
+    "@slack/webhook": "5.0.4"
   },
   "devDependencies": {
     "eslint": "^6.8.0"
