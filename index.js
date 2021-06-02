@@ -37,7 +37,8 @@ const eventToBuild = (data) => {
 
 // createSlackMessage creates a message from a build object.
 const createSlackMessage = (build) => {
-  console.log(JSON.stringify(build));
+  console.dir(build);
+
   const message = {
     text: `Build \`${build.status}\``,
     mrkdwn: true,
