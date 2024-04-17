@@ -7,5 +7,5 @@ This Google Cloud Function is based on the [example](https://cloud.google.com/cl
 To deploy, run:
 
 ```
-gcloud functions deploy subscribeSlack --trigger-topic cloud-builds --runtime nodejs10 --set-env-vars "SLACK_WEBHOOK_URL=https://hooks.slack.com/…"
+gcloud functions deploy subscribeSlack --gen2 --trigger-topic cloud-builds --runtime nodejs20 --set-env-vars "SLACK_WEBHOOK_URL=https://hooks.slack.com/…"
 ```
